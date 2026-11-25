@@ -27,6 +27,7 @@
   '<span class="ab-sp"></span>'+
   '<button class="ab-btn" type="button" data-ab="pin">Cambiar PIN</button>'+
   '<button class="ab-btn on-edit" type="button" data-ab="cover">Ver portada</button>'+
+  '<button class="ab-btn on-edit" type="button" data-ab="publish" title="Descargar los cambios para publicarlos en el sitio">Publicar</button>'+
   '<button class="ab-btn primary on-edit" type="button" data-ab="exit">Terminar edición</button>'+
   '<button class="ab-btn primary off-edit" type="button" data-ab="enter">Entrar al modo edición</button>'+
   '<button class="ab-btn off-edit" type="button" data-ab="close" aria-label="Ocultar la barra de administración">Cerrar</button>';
@@ -38,6 +39,7 @@
   if((a==='enter'||a==='exit')&&toggle)toggle.click();
   if(a==='close'&&toggle){toggle.hidden=true;sync()}
   if(a==='pin'&&window.AdminPin)AdminPin.openChange();
+  if(a==='publish'&&window.Publish)Publish.open();
   if(a==='cover'){
    if(location.hash==='#portada'&&history.replaceState)history.replaceState(null,'',location.pathname+location.search);
    location.hash='portada';

@@ -1,7 +1,7 @@
 /* Pie de página compartido: redes sociales (icono + descripción editable) y soporte por WhatsApp.
    Se carga en todas las páginas. Los datos se guardan con la clave 'footer-v1' (mismo navegador / mismo sitio).
    La edición solo se activa cuando la página está en «Modo edición» (protegido por PIN). */
-(function(){
+(window.Media&&Media.run||function(f){f()})(function(){
  'use strict';
  var KEY='footer-v1';
  var NETS={
@@ -103,4 +103,4 @@
  mo.observe(document.body,{attributes:true,attributeFilter:['class']});
  var pg=document.getElementById('page');if(pg)mo.observe(pg,{attributes:true,attributeFilter:['class']});
  render();
-})();
+});

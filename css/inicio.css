@@ -84,3 +84,9 @@ h2{margin:clamp(2.5rem,6vw,4rem) 0 .8rem;font-size:clamp(1.5rem,3.5vw,2.3rem);co
 .card.drop-r{box-shadow:8px 0 0 var(--gold)}
 .card.drop-t{box-shadow:0 -8px 0 var(--gold)}
 .card.drop-b{box-shadow:0 8px 0 var(--gold)}
+
+/* tarjetas de servicio: el enlace «Ver detalles» queda abajo, con el subrayado pegado al texto */
+.card .body{display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.card .body p{margin-bottom:.4rem}
+.card .more{margin-top:auto;align-self:center}
+.card .rm{align-self:center}

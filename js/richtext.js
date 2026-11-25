@@ -6,7 +6,7 @@
    Solo se permiten estas marcas (<mark>, <a>); todo lo demás se limpia, así que el contenido guardado no puede traer código.
    Los párrafos de la página que llevan data-rich="clave" se guardan aquí ('richtext-v1'); los bloques libres guardan su propia
    copia (campo rich) usando RichText.serialize / RichText.setHTML. */
-(function(){
+(window.Media&&Media.run||function(f){f()})(function(){
  'use strict';
  var KEY='richtext-v1';
  function $(i){return document.getElementById(i)}
@@ -162,4 +162,4 @@
   if(a&&isEd()&&a.closest('[contenteditable="true"]'))e.preventDefault();
  },true);
  window.RichText={serialize:serialize,sanitize:sanitize,setHTML:setHTML,parseLink:parseLink};
-})();
+});

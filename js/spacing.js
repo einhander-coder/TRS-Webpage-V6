@@ -1,7 +1,7 @@
 /* Espaciado entre las secciones de la página (modo edición).
    Un selector «Espaciado entre secciones» en el panel de edición ajusta la separación entre los bloques de contenido
    (galería, insumos, características, bloques libres…). Se guarda por página en este navegador (clave 'spacing-v1'). */
-(function(){
+(window.Media&&Media.run||function(f){f()})(function(){
  'use strict';
  var KEY='spacing-v1';
  var PRESETS=[['c','Compacto','1.2rem'],['n','Normal',''],['a','Amplio','clamp(4rem,9vw,6.5rem)'],['x','Muy amplio','clamp(6rem,14vw,10rem)']];
@@ -28,4 +28,4 @@
   if(note&&note.parentNode===host)host.insertBefore(bar,note);else host.appendChild(bar);
  }
  apply();
-})();
+});
